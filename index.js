@@ -15,7 +15,7 @@ const requestLogger = (request, response, next) => {
 
 app.use(requestLogger)
 app.use(cors())
-app.use(express.json())
+app.use(express.static('dist'))
 
 morgan.token('body', function (req) { return JSON.stringify(req.body) })
 
